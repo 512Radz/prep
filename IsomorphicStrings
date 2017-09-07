@@ -1,0 +1,24 @@
+public boolean isIsomorphic (String first, String second){
+
+  Map<character, character>() charMap = new HashMap<character, character>();
+  if(null == first || null == second){
+    return Boolean.FALSE;
+  }
+  
+  if(first.length() != second.length()){
+    return Boolean.FALSE;
+  }
+  
+  for (int counter = 0; counter< first.length(); counter++){
+    if(charMap.containsKey(first.charAt[counter])){
+      if(second[counter] != charMap.get(first.charAt[counter]))
+          return Boolean.FALSE;
+    } else (charMap.containsKey(second.charAt[counter])){
+      if(first[counter] != charMap.get(second.charAt[counter]))
+          return Boolean.FALSE;
+      else charMap.put(first.charAt[counter]), second.charAt[counter]));
+    }
+  }// end for
+  
+  return Boolean.TRUE;
+}
