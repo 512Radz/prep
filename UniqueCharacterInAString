@@ -1,0 +1,19 @@
+public class UniqueCharacter {
+	
+	public boolean hasUniqueCharacter(String str){
+		boolean flag[] = new boolean[128];
+		
+		for (int val = 0 ; val < str.length(); val++){
+			if(flag[str.charAt(val)]){
+				return Boolean.FALSE;
+			} else flag[str.charAt(val)] = Boolean.TRUE;
+		}
+		return Boolean.TRUE;
+	}
+	
+	public static void main(String [] args){
+		UniqueCharacter uc = new UniqueCharacter();
+		System.out.println(uc.hasUniqueCharacter("string8789"));
+	}
+
+}
