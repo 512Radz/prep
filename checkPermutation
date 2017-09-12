@@ -1,0 +1,28 @@
+package com.code.trials;
+
+public class checkPermutation {
+	
+	public boolean isPermutation(String S1, String S2){
+		if(S1.length()!= S2.length()) return false;
+		
+		int charCount[] = new int[128];
+		char[] charS1 = S1.toCharArray();
+		for (char ch : charS1){
+			charCount[ch]++;
+		}
+		
+		char[] charS2 = S2.toCharArray();
+		for (char ch : charS2){
+			charCount[ch]--;
+			if(charCount[ch] < 0) 
+				return false;
+		}
+		return true;
+	}
+	
+	public static void main (String []args){
+		
+		checkPermutation obj = new checkPermutation();
+		System.out.println(obj.isPermutation("bat", "tab  "));
+	}
+}
